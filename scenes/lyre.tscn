@@ -28,7 +28,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_j5jqj"]
 radius = 5.0
 
-[node name="Harp" type="Area2D"]
+[node name="Lyre" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_4wd4o")
 
