@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bu1td7cyxw2p2"]
+[gd_scene load_steps=18 format=3 uid="uid://bu1td7cyxw2p2"]
 
 [ext_resource type="Texture2D" uid="uid://c0ide8cx121cs" path="res://assets/sprites/DTC-Player.png" id="1_bnror"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_t2g43"]
@@ -22,42 +22,6 @@ region = Rect2(0, 32, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_0hiv5"]
 atlas = ExtResource("1_bnror")
 region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vlsf8"]
-atlas = ExtResource("1_bnror")
-region = Rect2(160, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3p30s"]
-atlas = ExtResource("1_bnror")
-region = Rect2(224, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jkhe3"]
-atlas = ExtResource("1_bnror")
-region = Rect2(192, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8qm7m"]
-atlas = ExtResource("1_bnror")
-region = Rect2(160, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dc1fs"]
-atlas = ExtResource("1_bnror")
-region = Rect2(128, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jaguk"]
-atlas = ExtResource("1_bnror")
-region = Rect2(96, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_daqrh"]
-atlas = ExtResource("1_bnror")
-region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_622t0"]
-atlas = ExtResource("1_bnror")
-region = Rect2(32, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6b7pk"]
-atlas = ExtResource("1_bnror")
-region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4fv2q"]
 atlas = ExtResource("1_bnror")
@@ -121,44 +85,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"lyre_idle",
-"speed": 2.0
+"speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vlsf8")
-}],
-"loop": false,
+"frames": [],
+"loop": true,
 "name": &"lyre_jump",
-"speed": 10.0
+"speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3p30s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jkhe3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8qm7m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dc1fs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jaguk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_daqrh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_622t0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6b7pk")
-}],
+"frames": [],
 "loop": true,
 "name": &"lyre_run",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -201,7 +138,7 @@ script = ExtResource("1_t2g43")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_k5hbj")
-animation = &"jump"
+animation = &"lyre_idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -27,16 +27,25 @@ func _physics_process(delta):
 		animated_sprite.flip_h = true
 	
 	# Play animations
-	if is_on_floor():
-		if direction == 0:
-			animated_sprite.play("idle")
+	if Global.lyre_pickup == true:
+		if is_on_floor():
+			if direction == 0:
+				animated_sprite.play("lyre_idle")
+			else:
+				animated_sprite.play("lyre_run")
 		else:
-			animated_sprite.play("run")
-	else:
-		animated_sprite.play("jump")
-		
-		
-	
+			animated_sprite.play("lyre_jump")
+	elif Global.lyre_pickup == false:
+		if is_on_floor():
+			if direction == 0:
+				animated_sprite.play("idle")
+			else:
+				animated_sprite.play("run")
+		else:
+			animated_sprite.play("jump")
+
+
+
 	if direction:
 		velocity.x = direction * SPEED
 	else:
