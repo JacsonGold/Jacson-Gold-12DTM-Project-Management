@@ -234,3 +234,5 @@ root_node = NodePath("../CollisionShape2D")
 libraries = {
 "": SubResource("AnimationLibrary_8scue")
 }
+
+[connection signal="body_entered" from="." to="." method="_on_player_attack_body_entered"]
