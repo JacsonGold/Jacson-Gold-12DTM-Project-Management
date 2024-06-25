@@ -1,8 +1,10 @@
 extends Area2D
 
+const DAMAGE = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	hide()
 	pass # Replace with function body.
 
 
@@ -12,6 +14,6 @@ func _ready():
 
 
 func attack():
+	show()
 	$AnimationPlayer.play("player_attack_animation")
 	print("attack")
-

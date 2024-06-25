@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://jq5wr6wapt1"]
+[gd_scene load_steps=7 format=3 uid="uid://jq5wr6wapt1"]
 
 [ext_resource type="PackedScene" uid="uid://bu1td7cyxw2p2" path="res://scenes/player.tscn" id="1_cn2bg"]
 [ext_resource type="Texture2D" uid="uid://bcfjm8lks62q2" path="res://assets/sprites/Tile-Map.png" id="2_oelwo"]
 [ext_resource type="PackedScene" uid="uid://d24uewn15s6kc" path="res://scenes/lyre.tscn" id="3_fc26b"]
+[ext_resource type="PackedScene" uid="uid://dy0u38ecusq24" path="res://scenes/destructable_barrel.tscn" id="4_rjhn1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0igul"]
 texture = ExtResource("2_oelwo")
@@ -90,3 +91,6 @@ layer_0/tile_data = PackedInt32Array(65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0,
 
 [node name="Lyre" parent="." instance=ExtResource("3_fc26b")]
 position = Vector2(22, -9)
+
+[node name="DestructableBarrel" parent="." instance=ExtResource("4_rjhn1")]
+position = Vector2(-29, 0)
