@@ -5,6 +5,7 @@ const DAMAGE = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hide()
+	$AnimationPlayer.play("player_onstart_weapon")
 	pass # Replace with function body.
 
 
