@@ -16,7 +16,9 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
+	elif Input.is_action_just_pressed("attack"):
+		if Global.lyre_pickup == true:
+			$PlayerAttack.attack()
 	# Get the input direction -1, 0, 1
 	var direction = Input.get_axis("move_left", "move_right")
 	
@@ -43,8 +45,6 @@ func _physics_process(delta):
 				animated_sprite.play("run")
 		else:
 			animated_sprite.play("jump")
-
-
 
 	if direction:
 		velocity.x = direction * SPEED

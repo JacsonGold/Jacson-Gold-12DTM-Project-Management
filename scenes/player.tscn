@@ -1,7 +1,8 @@
-[gd_scene load_steps=27 format=3 uid="uid://bu1td7cyxw2p2"]
+[gd_scene load_steps=28 format=3 uid="uid://bu1td7cyxw2p2"]
 
 [ext_resource type="Texture2D" uid="uid://c0ide8cx121cs" path="res://assets/sprites/DTC-Player.png" id="1_bnror"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_t2g43"]
+[ext_resource type="PackedScene" uid="uid://c26mfmpa4nhkw" path="res://scenes/player_attack.tscn" id="3_mi1qf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4xeab"]
 atlas = ExtResource("1_bnror")
@@ -207,3 +208,6 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_b75pn")
+
+[node name="PlayerAttack" parent="." instance=ExtResource("3_mi1qf")]
+position = Vector2(18, -11)
