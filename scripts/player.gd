@@ -25,8 +25,14 @@ func _physics_process(delta):
 	# Flip the sprite
 	if direction > 0:
 		animated_sprite.flip_h = false
+		$PlayerAttack/CollisionShape2D.position.x = 0
+		$PlayerAttack/AnimatedSprite2D.position.x = 0
+		$PlayerAttack/AnimatedSprite2D.flip_h = false
 	elif direction < 0:
 		animated_sprite.flip_h = true
+		$PlayerAttack/CollisionShape2D.position.x = -36
+		$PlayerAttack/AnimatedSprite2D.position.x = -36
+		$PlayerAttack/AnimatedSprite2D.flip_h = true
 	
 	# Play animations
 	if Global.lyre_pickup == true:
