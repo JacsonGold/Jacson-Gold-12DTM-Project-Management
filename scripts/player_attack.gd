@@ -17,7 +17,6 @@ func _ready():
 func attack():
 	show()
 	$AnimationPlayer.play("player_attack_animation")
-	print("attack")
 
 
 func _on_player_attack_body_entered(body):
