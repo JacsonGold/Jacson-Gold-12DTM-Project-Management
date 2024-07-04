@@ -196,6 +196,7 @@ radius = 2.0
 height = 16.0
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1
 collision_layer = 2
 script = ExtResource("1_t2g43")
 
