@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=3 uid="uid://bj4er37oxa5qy"]
+
+[ext_resource type="Script" path="res://scripts/snake.gd" id="1_saskt"]
+[ext_resource type="Texture2D" uid="uid://c4ayblgtijnc4" path="res://assets/sprites/Snake.png" id="1_we85o"]
+[ext_resource type="PackedScene" uid="uid://blhxdqydrt0ws" path="res://scenes/killzone.tscn" id="2_5qnvh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kija"]
+atlas = ExtResource("1_we85o")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtuds"]
+atlas = ExtResource("1_we85o")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdvr4"]
+atlas = ExtResource("1_we85o")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bv68d"]
+atlas = ExtResource("1_we85o")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5a8la"]
+atlas = ExtResource("1_we85o")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5b6i"]
+atlas = ExtResource("1_we85o")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wsq4c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kija")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtuds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdvr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bv68d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5a8la")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5b6i")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66pk5"]
+size = Vector2(13, 3)
+
+[node name="Snake" type="Node2D"]
+script = ExtResource("1_saskt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_wsq4c")
+animation = &"sleep"
+autoplay = "walk"
+frame_progress = 0.344972
+
+[node name="Killzone" parent="." instance=ExtResource("2_5qnvh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0.5, -1.5)
+shape = SubResource("RectangleShape2D_66pk5")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, -1)
+target_position = Vector2(7, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, -1)
+target_position = Vector2(-7, 0)
