@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://byqgkayccr7h4"]
+[gd_scene load_steps=3 format=3 uid="uid://byqgkayccr7h4"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_rrqcl"]
+[ext_resource type="Texture2D" uid="uid://dukrl2j565s7i" path="res://assets/sprites/TItle.png" id="2_wm4u3"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -11,12 +12,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rrqcl")
 
-[node name="StartButton" type="Button" parent="."]
+[node name="StartButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 481.0
-offset_top = 205.0
-offset_right = 683.0
-offset_bottom = 306.0
-text = "Start"
+offset_left = 538.0
+offset_top = 132.0
+offset_right = 581.0
+offset_bottom = 172.0
+texture_normal = ExtResource("2_wm4u3")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
