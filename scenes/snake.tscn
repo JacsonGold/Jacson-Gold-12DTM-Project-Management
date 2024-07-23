@@ -68,9 +68,8 @@ script = ExtResource("1_saskt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_wsq4c")
-animation = &"sleep"
+animation = &"walk"
 autoplay = "walk"
-frame_progress = 0.344972
 
 [node name="Killzone" parent="." instance=ExtResource("2_5qnvh")]
 
