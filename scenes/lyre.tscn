@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d24uewn15s6kc"]
+[gd_scene load_steps=8 format=3 uid="uid://d24uewn15s6kc"]
 
 [ext_resource type="Texture2D" uid="uid://xo54dir3f514" path="res://assets/sprites/Harp-Pickup.png" id="1_73vsp"]
 [ext_resource type="Script" path="res://scripts/lyre.gd" id="1_u0w4h"]
@@ -10,6 +10,10 @@ region = Rect2(0, 0, 13, 13)
 [sub_resource type="AtlasTexture" id="AtlasTexture_2r08p"]
 atlas = ExtResource("1_73vsp")
 region = Rect2(13, 0, 13, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jewb6"]
+atlas = ExtResource("1_73vsp")
+region = Rect2(12, 0, 6, 3)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d0dqe"]
 animations = [{
@@ -23,6 +27,14 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jewb6")
+}],
+"loop": true,
+"name": &"gone",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j5jqj"]
@@ -34,8 +46,8 @@ script = ExtResource("1_u0w4h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_d0dqe")
+animation = &"gone"
 autoplay = "default"
-frame_progress = 0.470485
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_j5jqj")
