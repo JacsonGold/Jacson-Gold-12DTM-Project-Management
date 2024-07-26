@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://cy3giyxd5v300"]
+
+[ext_resource type="Texture2D" uid="uid://bc4mi7htdu832" path="res://assets/sprites/intro-animation/CloudySky.png" id="1_s8slh"]
+[ext_resource type="Texture2D" uid="uid://cxuyb5a5lfmpc" path="res://assets/sprites/intro-animation/GrassyCliff.png" id="2_m30qf"]
+[ext_resource type="Script" path="res://scripts/proceed_cutscene_button.gd" id="3_sk5k0"]
+
+[sub_resource type="Animation" id="Animation_pbal8"]
+resource_name = "Intro Animation"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(576, 324), Vector2(676, 517)]
+}
+
+[sub_resource type="Animation" id="Animation_c532w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 324)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5kx3f"]
+_data = {
+"Intro Animation": SubResource("Animation_pbal8"),
+"RESET": SubResource("Animation_c532w")
+}
+
+[node name="IntroCutscene" type="Node2D"]
+
+[node name="CloudySky" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_s8slh")
+
+[node name="GrassyCliff" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("2_m30qf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../GrassyCliff")
+libraries = {
+"": SubResource("AnimationLibrary_5kx3f")
+}
+autoplay = "Intro Animation"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 49.0
+offset_top = 419.0
+offset_right = 1201.0
+offset_bottom = 582.0
+text = "The day of Orpheus and Eurydice's wedding.
+The day which would connect two beautiful individuals till the end of time.
+A day which would never be forgotten.
+
+As day broke, something felt off. Orpheus had prepared to marry the love of his life, but had been greeted with her death.
+A snake had reached her before him. 
+He now must get her soul back before it is too late."
+
+[node name="ProceedCutsceneButton" type="Button" parent="."]
+offset_left = 846.0
+offset_top = 544.0
+offset_right = 1055.0
+offset_bottom = 604.0
+text = "Proceed."
+script = ExtResource("3_sk5k0")
+
+[connection signal="pressed" from="ProceedCutsceneButton" to="ProceedCutsceneButton" method="_on_pressed"]
+[connection signal="pressed" from="ProceedCutsceneButton" to="ProceedCutsceneButton" method="_on_proceed_button_pressed"]

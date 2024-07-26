@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_rrqcl"]
 [ext_resource type="Texture2D" uid="uid://dr4o8qo76kh2g" path="res://assets/sprites/Start-Button.png" id="2_uoxux"]
-[ext_resource type="Texture2D" uid="uid://bjmbkswcas1ga" path="res://assets/sprites/TItle.png" id="2_wof48"]
+[ext_resource type="Texture2D" uid="uid://bjmbkswcas1ga" path="res://assets/sprites/Title.png" id="2_wof48"]
 [ext_resource type="Texture2D" uid="uid://sth7qn32c4wp" path="res://assets/sprites/TitleArtwork.png" id="4_k3p1l"]
 
 [node name="TitleScreen" type="Control"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjmbkswcas1ga"
-path="res://.godot/imported/Title.png-aee0e94d08537212431f2b8da0be215a.ctex"
+uid="uid://bc4mi7htdu832"
+path="res://.godot/imported/CloudySky.png-c6ceae29b920a356e27dd6626389d4d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Title.png"
-dest_files=["res://.godot/imported/Title.png-aee0e94d08537212431f2b8da0be215a.ctex"]
+source_file="res://assets/sprites/intro-animation/CloudySky.png"
+dest_files=["res://.godot/imported/CloudySky.png-c6ceae29b920a356e27dd6626389d4d3.ctex"]
 
 [params]
 

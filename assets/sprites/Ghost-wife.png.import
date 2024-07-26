@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjmbkswcas1ga"
-path="res://.godot/imported/Title.png-aee0e94d08537212431f2b8da0be215a.ctex"
+uid="uid://hw1b5a2hsbgd"
+path="res://.godot/imported/Ghost-wife.png-30a310b549bafc33f183097d34c52b2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Title.png"
-dest_files=["res://.godot/imported/Title.png-aee0e94d08537212431f2b8da0be215a.ctex"]
+source_file="res://assets/sprites/Ghost-wife.png"
+dest_files=["res://.godot/imported/Ghost-wife.png-30a310b549bafc33f183097d34c52b2a.ctex"]
 
 [params]
 

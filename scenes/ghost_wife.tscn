@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://b0crfbqbqkbkt"]
+
+[ext_resource type="Texture2D" uid="uid://hw1b5a2hsbgd" path="res://assets/sprites/Ghost-wife.png" id="1_12ow7"]
+[ext_resource type="Script" path="res://scripts/ghost_wife.gd" id="2_c1wmy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xx61r"]
+atlas = ExtResource("1_12ow7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ob6fg"]
+atlas = ExtResource("1_12ow7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mk7i8"]
+atlas = ExtResource("1_12ow7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psisr"]
+atlas = ExtResource("1_12ow7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xhvs"]
+atlas = ExtResource("1_12ow7")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmbkk"]
+atlas = ExtResource("1_12ow7")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3bt55"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xx61r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ob6fg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mk7i8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psisr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xhvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmbkk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="GhostWife" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_3bt55")
+autoplay = "default"
+frame = 1
+frame_progress = 0.299878
+script = ExtResource("2_c1wmy")
