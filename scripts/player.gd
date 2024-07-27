@@ -65,3 +65,4 @@ func handle_inputs(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
