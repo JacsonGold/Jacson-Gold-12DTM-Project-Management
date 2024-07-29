@@ -152,7 +152,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_68p4k")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udgq7"]
-size = Vector2(221, 20)
+size = Vector2(224, 20)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dlj3p"]
 
@@ -216,10 +216,11 @@ layer_2/tile_data = PackedInt32Array(-65562, 131073, 1, -65561, 131073, 1, -6556
 position = Vector2(-152, -7)
 
 [node name="NextLevelTP" type="Area2D" parent="."]
+collision_mask = 2
 script = ExtResource("4_vocch")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevelTP"]
-position = Vector2(1041.5, 46)
+position = Vector2(1040, 46)
 shape = SubResource("RectangleShape2D_udgq7")
 
 [node name="Killzone" parent="." instance=ExtResource("4_8txs5")]
