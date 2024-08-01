@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c755abet76uu5"]
+[gd_scene load_steps=3 format=3 uid="uid://bft85n4fwuc00"]
 
-[ext_resource type="Texture2D" uid="uid://bumyqleed53sd" path="res://assets/sprites/Platform.png" id="1_eqk7u"]
+[ext_resource type="Texture2D" uid="uid://cy7obsdlo3drb" path="res://assets/sprites/Underworld-Floating-Platform.png" id="1_m7s77"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7es7s"]
 size = Vector2(48, 16)
@@ -8,7 +8,7 @@ size = Vector2(48, 16)
 [node name="Platform" type="AnimatableBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_eqk7u")
+texture = ExtResource("1_m7s77")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7es7s")
