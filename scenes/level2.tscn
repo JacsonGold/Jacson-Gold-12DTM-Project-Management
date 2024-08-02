@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b0p26kqqifif"]
+[gd_scene load_steps=17 format=3 uid="uid://b0p26kqqifif"]
 
 [ext_resource type="Script" path="res://scripts/level2.gd" id="1_aw2f0"]
 [ext_resource type="PackedScene" uid="uid://bu1td7cyxw2p2" path="res://scenes/player.tscn" id="1_lxdi7"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bfh0iwqo8ddi2" path="res://scenes/gates_of_heck.tscn" id="6_v3xmj"]
 [ext_resource type="PackedScene" uid="uid://bft85n4fwuc00" path="res://scenes/platformheck.tscn" id="7_srg2k"]
 [ext_resource type="Script" path="res://scripts/cerberus_boss_trigger.gd" id="8_a2k62"]
+[ext_resource type="PackedScene" uid="uid://214tuf5sondk" path="res://scenes/cerberus.tscn" id="9_j81rp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_68p4k"]
 texture = ExtResource("2_1i0ux")
@@ -197,3 +198,8 @@ script = ExtResource("8_a2k62")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CerberusBossTrigger"]
 position = Vector2(553, -70.5)
 shape = SubResource("RectangleShape2D_64bdj")
+
+[node name="Cerberus" parent="." instance=ExtResource("9_j81rp")]
+position = Vector2(809.5, -93.5)
+
+[connection signal="body_entered" from="CerberusBossTrigger" to="." method="_on_cerberus_boss_trigger_body_entered"]

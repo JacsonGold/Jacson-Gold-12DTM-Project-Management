@@ -10,3 +10,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_cerberus_boss_trigger_body_entered(body):
+	
+	pass # Replace with function body.
