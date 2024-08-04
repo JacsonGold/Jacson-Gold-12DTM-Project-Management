@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://214tuf5sondk"]
+[gd_scene load_steps=9 format=3 uid="uid://214tuf5sondk"]
 
 [ext_resource type="Texture2D" uid="uid://dx66ube6d2k3k" path="res://assets/sprites/Cerberus.png" id="1_n6n5d"]
+[ext_resource type="Script" path="res://scripts/cerberus.gd" id="1_vu5bu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l5wu6"]
 atlas = ExtResource("1_n6n5d")
@@ -9,6 +10,14 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_db55q"]
 atlas = ExtResource("1_n6n5d")
 region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljf4x"]
+atlas = ExtResource("1_n6n5d")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4dfj"]
+atlas = ExtResource("1_n6n5d")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x67oa"]
 animations = [{
@@ -22,20 +31,33 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljf4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4dfj")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 1.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yyv5k"]
-size = Vector2(27, 27)
+size = Vector2(27, 170)
 
 [node name="Cerberus" type="CharacterBody2D"]
 position = Vector2(0.5, -13.5)
+collision_mask = 2
+script = ExtResource("1_vu5bu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.5, -2.5)
 sprite_frames = SubResource("SpriteFrames_x67oa")
 autoplay = "default"
-frame = 1
-frame_progress = 0.534839
+frame_progress = 0.466558
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -61.5)
 shape = SubResource("RectangleShape2D_yyv5k")
