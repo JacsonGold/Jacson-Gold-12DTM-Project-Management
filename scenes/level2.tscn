@@ -186,11 +186,12 @@ position = Vector2(-474, -310)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -9)
-zoom = Vector2(4, 4)
+zoom = Vector2(3.75, 3.75)
 limit_bottom = 50
 
 [node name="CerberusBossBar" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(1, -66)
+position = Vector2(-9.05991e-06, -60)
+scale = Vector2(0.492187, 0.492187)
 sprite_frames = SubResource("SpriteFrames_if85d")
 animation = &"alive"
 autoplay = "alive"

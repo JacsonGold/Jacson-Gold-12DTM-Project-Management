@@ -17,7 +17,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(576, 324), Vector2(676, 517)]
+"values": [Vector2(339, 344), Vector2(460, 378)]
 }
 
 [sub_resource type="Animation" id="Animation_c532w"]
@@ -44,7 +44,8 @@ _data = {
 [node name="IntroCutscene" type="Node2D"]
 
 [node name="CloudySky" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
+position = Vector2(56.4445, 254.5)
+scale = Vector2(0.779321, 0.779321)
 texture = ExtResource("1_s8slh")
 
 [node name="GrassyCliff" type="Sprite2D" parent="."]
@@ -59,10 +60,10 @@ libraries = {
 autoplay = "Intro Animation"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 49.0
-offset_top = 419.0
-offset_right = 1201.0
-offset_bottom = 582.0
+offset_left = 10.0
+offset_top = 183.0
+offset_right = 510.0
+offset_bottom = 494.0
 text = "The day of Orpheus and Eurydice's wedding.
 The day which would connect two beautiful individuals till the end of time.
 A day which would never be forgotten.
@@ -72,10 +73,10 @@ A snake had reached her before him.
 He now must get her soul back before it is too late."
 
 [node name="ProceedCutsceneButton" type="Button" parent="."]
-offset_left = 846.0
-offset_top = 544.0
-offset_right = 1055.0
-offset_bottom = 604.0
+offset_left = 283.0
+offset_top = 430.0
+offset_right = 492.0
+offset_bottom = 490.0
 text = "Proceed."
 script = ExtResource("3_sk5k0")
 

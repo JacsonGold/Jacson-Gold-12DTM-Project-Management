@@ -199,7 +199,7 @@ position = Vector2(-474, -64)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -9)
-zoom = Vector2(4, 4)
+zoom = Vector2(3.75, 3.75)
 limit_bottom = 50
 
 [node name="TileMap" type="TileMap" parent="."]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjmbkswcas1ga"
-path="res://.godot/imported/TItle.png-038c3bff9cc66248680c35cfcaf7fe29.ctex"
+uid="uid://cdw64da804umo"
+path="res://.godot/imported/hades-scene.png-5d4b0b33bfe6ed574b735d8d70760439.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/TItle.png"
-dest_files=["res://.godot/imported/TItle.png-038c3bff9cc66248680c35cfcaf7fe29.ctex"]
+source_file="res://assets/sprites/hades-scene.png"
+dest_files=["res://.godot/imported/hades-scene.png-5d4b0b33bfe6ed574b735d8d70760439.ctex"]
 
 [params]
 
