@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1n1dq1oho18a"]
+[gd_scene load_steps=10 format=3 uid="uid://d1n1dq1oho18a"]
 
 [ext_resource type="Script" path="res://scripts/level2.gd" id="1_jgi8h"]
 [ext_resource type="PackedScene" uid="uid://bu1td7cyxw2p2" path="res://scenes/player.tscn" id="2_8gvto"]
 [ext_resource type="Texture2D" uid="uid://cqrm4qr6nnqjy" path="res://assets/sprites/Underworld-Spritesheet.png" id="3_2r07k"]
 [ext_resource type="PackedScene" uid="uid://blhxdqydrt0ws" path="res://scenes/killzone.tscn" id="4_kayln"]
+[ext_resource type="Texture2D" uid="uid://df1nil32xcb1o" path="res://assets/sprites/Hades.png" id="5_q7xp3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_68p4k"]
 texture = ExtResource("3_2r07k")
@@ -103,11 +104,14 @@ sources/1 = SubResource("TileSetAtlasSource_68p4k")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dlj3p"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ouqmi"]
+size = Vector2(112, 193)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_jgi8h")
 
 [node name="Player" parent="." instance=ExtResource("2_8gvto")]
-position = Vector2(-806, -54)
+position = Vector2(-990, -87)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -9)
@@ -122,10 +126,22 @@ layer_0/tile_data = PackedInt32Array(-1769513, 65537, 8, -1703977, 65537, 8, -16
 layer_1/name = "Midground"
 layer_1/tile_data = PackedInt32Array()
 layer_2/name = "Foreground"
-layer_2/tile_data = PackedInt32Array()
+layer_2/tile_data = PackedInt32Array(-63, 65537, 1, 65473, 65537, 1, 131009, 65537, 1, -62, 131073, 1, 65474, 131073, 1, 131010, 131073, 1, -61, 262145, 0, 65475, 131073, 1, 131011, 131073, 1, -60, 131073, 1, 65476, 131073, 1, 131012, 131073, 1, -59, 131073, 1, 65477, 131073, 1, 131013, 131073, 1, -58, 131073, 1, 65478, 131073, 1, 131014, 131073, 1, -57, 262145, 1, 65479, 131073, 1, 131015, 131073, 1, -56, 131073, 1, 65480, 131073, 1, 131016, 131073, 1, -55, 131073, 1, 65481, 131073, 1, 131017, 131073, 1, -54, 131073, 1, 65482, 131073, 1, 131018, 131073, 1, -53, 131073, 1, 65483, 131073, 1, 131019, 131073, 1, -52, 131073, 1, 65484, 131073, 1, 131020, 131073, 1, -51, 131073, 1, 65485, 131073, 1, 131021, 131073, 1, -50, 131073, 1, 65486, 131073, 1, 131022, 131073, 1, -49, 131073, 1, 65487, 131073, 1, 131023, 131073, 1, -48, 131073, 1, 65488, 262145, 0, 131024, 131073, 1, -47, 131073, 1, 65489, 131073, 1, 131025, 131073, 1, -46, 131073, 1, 65490, 131073, 1, 131026, 131073, 1, -45, 131073, 1, 65491, 131073, 1, 131027, 262145, 1, -44, 327681, 1, 65492, 131073, 1, 131028, 131073, 1, -43, 131073, 1, 65493, 131073, 1, 131029, 131073, 1, -42, 131073, 1, 65494, 262145, 0, 131030, 131073, 1, -41, 196609, 1, 65495, 196609, 1, 131031, 196609, 1, -65599, 65537, 0, -65598, 131073, 0, -65597, 131073, 0, -65596, 131073, 0, -65595, 131073, 0, -65594, 131073, 0, -65593, 131073, 0, -65592, 131073, 0, -65591, 131073, 0, -65590, 131073, 0, -65589, 131073, 0, -65588, 131073, 0, -65587, 131073, 0, -65586, 131073, 0, -65585, 131073, 0, -65584, 131073, 0, -65583, 131073, 0, -65582, 131073, 0, -65581, 131073, 0, -65580, 131073, 0, -65579, 131073, 0, -65578, 131073, 0, -65577, 196609, 0, 196545, 65537, 1, 262081, 65537, 1, 327617, 65537, 1, 196546, 131073, 1, 262082, 131073, 1, 327618, 131073, 1, 196547, 131073, 1, 262083, 262145, 2, 327619, 131073, 1, 196548, 131073, 1, 262084, 131073, 1, 327620, 131073, 1, 196549, 131073, 1, 262085, 131073, 1, 327621, 131073, 1, 196550, 131073, 1, 262086, 131073, 1, 327622, 131073, 1, 196551, 262145, 0, 262087, 131073, 1, 327623, 131073, 1, 196552, 131073, 1, 262088, 131073, 1, 327624, 131073, 1, 196553, 131073, 1, 262089, 131073, 1, 327625, 131073, 1, 196554, 131073, 1, 262090, 131073, 1, 327626, 131073, 1, 196555, 131073, 1, 262091, 327681, 1, 327627, 131073, 1, 196556, 131073, 1, 262092, 131073, 1, 327628, 131073, 1, 196557, 131073, 1, 262093, 131073, 1, 327629, 131073, 1, 196558, 131073, 1, 262094, 131073, 1, 327630, 131073, 1, 196559, 131073, 1, 262095, 131073, 1, 327631, 131073, 1, 196560, 131073, 1, 262096, 131073, 1, 327632, 131073, 1, 196561, 131073, 1, 262097, 131073, 1, 327633, 131073, 1, 196562, 131073, 1, 262098, 131073, 1, 327634, 131073, 1, 196563, 131073, 1, 262099, 131073, 1, 327635, 131073, 1, 196564, 131073, 1, 262100, 131073, 1, 327636, 131073, 1, 196565, 131073, 1, 262101, 131073, 1, 327637, 131073, 1, 196566, 131073, 1, 262102, 131073, 1, 327638, 262145, 2, 196567, 196609, 1, 262103, 196609, 1, 327639, 196609, 1)
 
 [node name="Killzone" parent="." instance=ExtResource("4_kayln")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(77, 74)
 shape = SubResource("WorldBoundaryShape2D_dlj3p")
+
+[node name="Hades" type="CharacterBody2D" parent="."]
+position = Vector2(-584, -64.5)
+collision_layer = 255
+collision_mask = 255
+
+[node name="Hades" type="Sprite2D" parent="Hades"]
+position = Vector2(-1, -2.5)
+texture = ExtResource("5_q7xp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hades"]
+shape = SubResource("RectangleShape2D_ouqmi")

@@ -1,14 +1,43 @@
-[gd_scene load_steps=17 format=3 uid="uid://b0p26kqqifif"]
+[gd_scene load_steps=22 format=3 uid="uid://b0p26kqqifif"]
 
 [ext_resource type="Script" path="res://scripts/level2.gd" id="1_aw2f0"]
 [ext_resource type="PackedScene" uid="uid://bu1td7cyxw2p2" path="res://scenes/player.tscn" id="1_lxdi7"]
 [ext_resource type="Texture2D" uid="uid://cqrm4qr6nnqjy" path="res://assets/sprites/Underworld-Spritesheet.png" id="2_1i0ux"]
 [ext_resource type="PackedScene" uid="uid://d24uewn15s6kc" path="res://scenes/lyre.tscn" id="3_4ny73"]
+[ext_resource type="Texture2D" uid="uid://bb224fh34xlk6" path="res://assets/sprites/Cerberus-Boss-Bar.png" id="3_v4iv8"]
 [ext_resource type="PackedScene" uid="uid://blhxdqydrt0ws" path="res://scenes/killzone.tscn" id="4_8txs5"]
+[ext_resource type="Script" path="res://scripts/cerberus_boss_bar.gd" id="4_77lwx"]
 [ext_resource type="PackedScene" uid="uid://bfh0iwqo8ddi2" path="res://scenes/gates_of_heck.tscn" id="6_v3xmj"]
 [ext_resource type="PackedScene" uid="uid://bft85n4fwuc00" path="res://scenes/platformheck.tscn" id="7_srg2k"]
 [ext_resource type="Script" path="res://scripts/cerberus_boss_trigger.gd" id="8_a2k62"]
 [ext_resource type="PackedScene" uid="uid://214tuf5sondk" path="res://scenes/cerberus.tscn" id="9_j81rp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vjdt"]
+atlas = ExtResource("3_v4iv8")
+region = Rect2(0, 0, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvpa0"]
+atlas = ExtResource("3_v4iv8")
+region = Rect2(256, 0, 256, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_if85d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vjdt")
+}],
+"loop": true,
+"name": &"alive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvpa0")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 5.0
+}]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_68p4k"]
 texture = ExtResource("2_1i0ux")
@@ -159,6 +188,13 @@ position = Vector2(-474, -310)
 position = Vector2(0, -9)
 zoom = Vector2(4, 4)
 limit_bottom = 50
+
+[node name="CerberusBossBar" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(1, -66)
+sprite_frames = SubResource("SpriteFrames_if85d")
+animation = &"alive"
+autoplay = "alive"
+script = ExtResource("4_77lwx")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_20cis")
