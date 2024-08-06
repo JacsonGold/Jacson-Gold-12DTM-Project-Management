@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjmbkswcas1ga"
-path="res://.godot/imported/TItle.png-038c3bff9cc66248680c35cfcaf7fe29.ctex"
+uid="uid://bb224fh34xlk6"
+path="res://.godot/imported/Cerberus-Boss-Bar.png-7ec5b18a450e79328478518f0213355b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/TItle.png"
-dest_files=["res://.godot/imported/TItle.png-038c3bff9cc66248680c35cfcaf7fe29.ctex"]
+source_file="res://assets/sprites/Cerberus-Boss-Bar.png"
+dest_files=["res://.godot/imported/Cerberus-Boss-Bar.png-7ec5b18a450e79328478518f0213355b.ctex"]
 
 [params]
 
