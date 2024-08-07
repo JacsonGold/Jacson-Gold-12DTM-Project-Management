@@ -1,25 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwb1831gb5cok"]
+[gd_scene load_steps=7 format=3 uid="uid://cwb1831gb5cok"]
 
-[ext_resource type="Texture2D" uid="uid://cdw64da804umo" path="res://assets/sprites/hades-scene.png" id="1_54kih"]
+[ext_resource type="Texture2D" uid="uid://cdw64da804umo" path="res://assets/sprites/Hades-Scene.png" id="1_54kih"]
 [ext_resource type="Script" path="res://scripts/hades_scene_animation.gd" id="2_c07kq"]
-
-[sub_resource type="Animation" id="Animation_pvpsg"]
-resource_name = "hades_text"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["Hades sat, looming over Orpheus, as he pleaded for the soul of his wife back.
-Orpheus began running out of hope, and out of desperation started doing the one thing he now how to.
-His music played out all over the underworld, and it seemed that time froze.
-"]
-}
 
 [sub_resource type="Animation" id="Animation_1u70l"]
 length = 0.001
@@ -39,10 +21,47 @@ His music played out all over the underworld, and it seemed that time froze.
 "]
 }
 
+[sub_resource type="Animation" id="Animation_pvpsg"]
+resource_name = "hades_text"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Hades sat, looming over Orpheus, as he pleaded for the soul of his wife back.
+Orpheus began running out of hope, and out of desperation started doing the one thing he now how to.
+His music played out all over the underworld, and it seemed that time froze.
+"]
+}
+
+[sub_resource type="Animation" id="Animation_yaeuf"]
+resource_name = "hades_text_progressed"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Hades was moved and he decided that Orpheus may have his wife's soul back as long as he walked his way all the way out of the underworld without turning to look at her.
+Orpheus accepted gratefully, dropping his lyre before sprinting out of the room, back towards the overworld."]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ulvd4"]
 _data = {
 "RESET": SubResource("Animation_1u70l"),
-"hades_text": SubResource("Animation_pvpsg")
+"hades_text": SubResource("Animation_pvpsg"),
+"hades_text_progressed": SubResource("Animation_yaeuf")
 }
 
 [node name="HadesScene" type="Control"]

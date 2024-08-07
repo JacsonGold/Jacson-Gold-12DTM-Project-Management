@@ -9,6 +9,7 @@ var health = 1
 func _ready():
 	animated_sprite.play("default")
 	collision_shape.disabled = false
+	Global.cerberus_sleep = false
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,6 +19,7 @@ func _ready():
 func sleep():
 	animated_sprite.play("sleep")
 	collision_shape.set_deferred("disabled", false)
+	Global.cerberus_sleep = true
 	
 func take_damage(damage):
 	health -= damage

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b0p26kqqifif"]
+[gd_scene load_steps=25 format=3 uid="uid://b0p26kqqifif"]
 
 [ext_resource type="Script" path="res://scripts/level2.gd" id="1_aw2f0"]
 [ext_resource type="PackedScene" uid="uid://bu1td7cyxw2p2" path="res://scenes/player.tscn" id="1_lxdi7"]
@@ -7,10 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://bb224fh34xlk6" path="res://assets/sprites/Cerberus-Boss-Bar.png" id="3_v4iv8"]
 [ext_resource type="PackedScene" uid="uid://blhxdqydrt0ws" path="res://scenes/killzone.tscn" id="4_8txs5"]
 [ext_resource type="Script" path="res://scripts/cerberus_boss_bar.gd" id="4_77lwx"]
+[ext_resource type="Script" path="res://scripts/level2-to-level3.gd" id="5_52fe4"]
 [ext_resource type="PackedScene" uid="uid://bfh0iwqo8ddi2" path="res://scenes/gates_of_heck.tscn" id="6_v3xmj"]
 [ext_resource type="PackedScene" uid="uid://bft85n4fwuc00" path="res://scenes/platformheck.tscn" id="7_srg2k"]
 [ext_resource type="Script" path="res://scripts/cerberus_boss_trigger.gd" id="8_a2k62"]
 [ext_resource type="PackedScene" uid="uid://214tuf5sondk" path="res://scenes/cerberus.tscn" id="9_j81rp"]
+[ext_resource type="Texture2D" uid="uid://covqs2b480u5l" path="res://assets/sprites/Down-Here.png" id="13_g5358"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1vjdt"]
 atlas = ExtResource("3_v4iv8")
@@ -178,6 +180,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64bdj"]
 size = Vector2(18, 269)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlra7"]
+size = Vector2(164, 20)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_aw2f0")
 
@@ -193,7 +198,7 @@ limit_bottom = 50
 position = Vector2(-9.05991e-06, -60)
 scale = Vector2(0.492187, 0.492187)
 sprite_frames = SubResource("SpriteFrames_if85d")
-animation = &"alive"
+animation = &"sleep"
 autoplay = "alive"
 script = ExtResource("4_77lwx")
 
@@ -239,4 +244,18 @@ shape = SubResource("RectangleShape2D_64bdj")
 [node name="Cerberus" parent="." instance=ExtResource("9_j81rp")]
 position = Vector2(809.5, -93.5)
 
+[node name="Down-here" type="Sprite2D" parent="."]
+position = Vector2(860, -111)
+texture = ExtResource("13_g5358")
+
+[node name="NextLevelTP" type="Area2D" parent="."]
+position = Vector2(-474, -310)
+collision_mask = 2
+script = ExtResource("5_52fe4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevelTP"]
+position = Vector2(1388, 303)
+shape = SubResource("RectangleShape2D_tlra7")
+
 [connection signal="body_entered" from="CerberusBossTrigger" to="." method="_on_cerberus_boss_trigger_body_entered"]
+[connection signal="body_entered" from="NextLevelTP" to="NextLevelTP" method="_on_body_entered"]

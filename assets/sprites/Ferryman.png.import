@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdw64da804umo"
-path="res://.godot/imported/Hades-Scene.png-ab972d8d7ea89585f3dcd5c0fd2f62b4.ctex"
+uid="uid://b7vh2521od5rd"
+path="res://.godot/imported/Ferryman.png-79b374ce487b3284dfd5e2e36eb40b0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Hades-Scene.png"
-dest_files=["res://.godot/imported/Hades-Scene.png-ab972d8d7ea89585f3dcd5c0fd2f62b4.ctex"]
+source_file="res://assets/sprites/Ferryman.png"
+dest_files=["res://.godot/imported/Ferryman.png-79b374ce487b3284dfd5e2e36eb40b0c.ctex"]
 
 [params]
 

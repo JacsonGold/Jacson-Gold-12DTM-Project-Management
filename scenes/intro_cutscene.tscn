@@ -80,5 +80,5 @@ offset_bottom = 490.0
 text = "Proceed."
 script = ExtResource("3_sk5k0")
 
-[connection signal="pressed" from="ProceedCutsceneButton" to="ProceedCutsceneButton" method="_on_pressed"]
 [connection signal="pressed" from="ProceedCutsceneButton" to="ProceedCutsceneButton" method="_on_proceed_button_pressed"]
+[connection signal="pressed" from="ProceedCutsceneButton" to="ProceedCutsceneButton" method="_on_pressed"]

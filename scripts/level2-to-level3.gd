@@ -1,15 +1,16 @@
-extends AnimatedSprite2D
+extends Area2D
 
-@onready var cerberus_boss_bar = $"."
+func _on_body_entered(body):
+	print("Second Level Completed")
+	get_tree().change_scene_to_file("res://scenes/ferryman_scene.tscn")
+	pass # Replace with function body.
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	cerberus_boss_bar.visible = false
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	if Global.cerberus_sleep == true:
-		cerberus_boss_bar.play("sleep")
+

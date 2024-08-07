@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://b0crfbqbqkbkt"]
+[gd_scene load_steps=11 format=3 uid="uid://b0crfbqbqkbkt"]
 
 [ext_resource type="Texture2D" uid="uid://hw1b5a2hsbgd" path="res://assets/sprites/Ghost-wife.png" id="1_12ow7"]
 [ext_resource type="Script" path="res://scripts/ghost_wife.gd" id="2_c1wmy"]
+[ext_resource type="Texture2D" uid="uid://cemi36g0kas3j" path="res://assets/sprites/Help-Me.png" id="3_g1xv7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xx61r"]
 atlas = ExtResource("1_12ow7")
@@ -62,3 +63,7 @@ autoplay = "default"
 frame = 1
 frame_progress = 0.299878
 script = ExtResource("2_c1wmy")
+
+[node name="Help-me" type="Sprite2D" parent="AnimatedSprite2D"]
+position = Vector2(-34, -14)
+texture = ExtResource("3_g1xv7")
