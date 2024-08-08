@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://byqgkayccr7h4"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_rrqcl"]
-[ext_resource type="Texture2D" uid="uid://dr4o8qo76kh2g" path="res://assets/sprites/Start-Button.png" id="2_uoxux"]
-[ext_resource type="Texture2D" uid="uid://bjmbkswcas1ga" path="res://assets/sprites/TItle.png" id="2_wof48"]
+[ext_resource type="PackedScene" uid="uid://d3vgvytwfk3k" path="res://scenes/settings_menu.tscn" id="3_aeoui"]
+[ext_resource type="AudioStream" uid="uid://dmivexu0jq3gs" path="res://assets/sounds/music/Sunstrider.mp3" id="4_0t156"]
 [ext_resource type="Texture2D" uid="uid://sth7qn32c4wp" path="res://assets/sprites/TitleArtwork.png" id="4_k3p1l"]
 
 [node name="TitleScreen" type="Control"]
@@ -14,29 +14,45 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rrqcl")
 
-[node name="Title" type="TextureButton" parent="."]
-z_index = 1
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 55.0
-offset_right = 493.0
-offset_bottom = 170.0
-texture_normal = ExtResource("2_wof48")
-stretch_mode = 0
+offset_left = 200.0
+offset_top = 200.0
+offset_right = 300.0
+offset_bottom = 301.0
+scale = Vector2(1.89, 1.89)
+pivot_offset = Vector2(50, 50)
 
-[node name="StartButton" type="TextureButton" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 116.0
-offset_top = 181.0
-offset_right = 394.0
-offset_bottom = 207.0
-texture_normal = ExtResource("2_uoxux")
-stretch_mode = 0
+[node name="UIContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/UIContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="Options" type="Button" parent="MarginContainer/UIContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Quit" type="Button" parent="MarginContainer/UIContainer"]
+layout_mode = 2
+text = "Quit"
 
 [node name="TitleArtwork" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(250.5, 249.5)
 scale = Vector2(1.94922, 1.94922)
 texture = ExtResource("4_k3p1l")
 
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[node name="SettingsMenu" parent="." instance=ExtResource("3_aeoui")]
+initial_position = 1
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0t156")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="MarginContainer/UIContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/UIContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/UIContainer/Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://tft06unsdhdi"
+path="res://.godot/imported/Mecha Collection.mp3-6d0895abbf94ee6b0884f9dc64db48af.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/music/Mecha Collection.mp3"
+dest_files=["res://.godot/imported/Mecha Collection.mp3-6d0895abbf94ee6b0884f9dc64db48af.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

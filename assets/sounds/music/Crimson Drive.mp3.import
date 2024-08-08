@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://niq24a1nowy7"
+path="res://.godot/imported/Crimson Drive.mp3-fc7823dd1af3a43fb4f583efe0a34bd2.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/music/Crimson Drive.mp3"
+dest_files=["res://.godot/imported/Crimson Drive.mp3-fc7823dd1af3a43fb4f583efe0a34bd2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

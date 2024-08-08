@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6kelviwpc8ux"
+path="res://.godot/imported/Abandoned Hopes.mp3-12c8c8fd8ec9a974b6217c84d58b8d99.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/music/Abandoned Hopes.mp3"
+dest_files=["res://.godot/imported/Abandoned Hopes.mp3-12c8c8fd8ec9a974b6217c84d58b8d99.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

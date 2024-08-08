@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c71jhylcxgddt"
+path="res://.godot/imported/Fields of Ice.mp3-baf0044744a3e8a04934d524c4f9a1e8.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/music/Fields of Ice.mp3"
+dest_files=["res://.godot/imported/Fields of Ice.mp3-baf0044744a3e8a04934d524c4f9a1e8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
