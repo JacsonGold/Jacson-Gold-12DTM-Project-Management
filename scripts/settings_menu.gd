@@ -1,5 +1,16 @@
 extends Popup
 
+@onready var input_button_scene = preload("res://scenes/input_button.tscn")
+@onready var action_list = $MarginContainer/VBoxContainer/KeyRebinder
+var is_remapping = false
+
+
+
+
+
+
+#SOUND SETTINGS
+
 # Music
 func _on_volume_music_value_changed(value):
 	AudioServer.set_bus_volume_db(1,value)

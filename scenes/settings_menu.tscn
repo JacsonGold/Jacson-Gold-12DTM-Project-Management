@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3vgvytwfk3k"]
+[gd_scene load_steps=3 format=3 uid="uid://d3vgvytwfk3k"]
 
 [ext_resource type="Script" path="res://scripts/settings_menu.gd" id="1_r7h4v"]
+[ext_resource type="PackedScene" uid="uid://d34jsdlim4bua" path="res://scenes/input_button.tscn" id="2_ekr6d"]
 
 [node name="SettingsMenu" type="Popup"]
 position = Vector2i(100, 0)
@@ -48,6 +49,21 @@ layout_mode = 2
 text = "Mute"
 
 [node name="SFXMuteMusicBox" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="KeyRebinder" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="InputButton" parent="MarginContainer/VBoxContainer/KeyRebinder" instance=ExtResource("2_ekr6d")]
+layout_mode = 2
+
+[node name="InputButton3" parent="MarginContainer/VBoxContainer/KeyRebinder" instance=ExtResource("2_ekr6d")]
+layout_mode = 2
+
+[node name="InputButton2" parent="MarginContainer/VBoxContainer/KeyRebinder" instance=ExtResource("2_ekr6d")]
+layout_mode = 2
+
+[node name="InputButton4" parent="MarginContainer/VBoxContainer/KeyRebinder" instance=ExtResource("2_ekr6d")]
 layout_mode = 2
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/VolumeMusic" to="." method="_on_volume_music_value_changed"]
