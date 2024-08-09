@@ -1,17 +1,19 @@
 extends Popup
 
 @onready var labels = {
-	"jump": $MarginContainer/VBoxContainer/RemapJump,
-	"move_left": $MarginContainer/VBoxContainer/RemapMoveLeft,
-	"move_right": $MarginContainer/VBoxContainer/RemapMoveRight,
-	"attack": $MarginContainer/VBoxContainer/RemapAttack
+	"jump": $MarginContainer/VBoxContainer/Jump/RemapJump,
+	"move_left": $MarginContainer/VBoxContainer/Left/RemapMoveLeft,
+	"move_right": $MarginContainer/VBoxContainer/Right/RemapMoveRight,
+	"attack": $MarginContainer/VBoxContainer/Attack/RemapAttack
 }
 
+
+# CONTROL REBINDING
 
 var action_to_remap = ""
 func _ready():
 	# Connect the button's pressed signal to the function
-	$MarginContainer/VBoxContainer/RemapJump.connect("pressed", _on_remap_jump_pressed)
+	$MarginContainer/VBoxContainer/Jump/RemapJump.connect("pressed", _on_remap_jump_pressed)
 	
 func remap_action(action_name):
 	action_to_remap = action_name
@@ -33,10 +35,6 @@ func _on_remap_move_right_pressed():
 	
 func _on_remap_attack_pressed():
 	remap_action("attack")
-
-
-
-
 
 #func _process_input(event):
 func _input(event):
@@ -74,7 +72,3 @@ func _on_volume_sfx_value_changed(value):
 
 func _on_sfx_mute_music_box_toggled(toggled_on):
 	AudioServer.set_bus_mute(2,toggled_on)
-
-
-
-

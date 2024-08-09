@@ -1,14 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3vgvytwfk3k"]
+[gd_scene load_steps=2 format=3 uid="uid://d3vgvytwfk3k"]
 
 [ext_resource type="Script" path="res://scripts/settings_menu.gd" id="1_r7h4v"]
-
-[sub_resource type="Theme" id="Theme_065fh"]
 
 [node name="SettingsMenu" type="Popup"]
 position = Vector2i(100, 0)
 size = Vector2i(300, 398)
 visible = true
-theme = SubResource("Theme_065fh")
 script = ExtResource("1_r7h4v")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -58,71 +55,73 @@ layout_mode = 2
 text = "Keybind Remap"
 horizontal_alignment = 1
 
-[node name="Left" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="LeftRight" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Left" type="Label" parent="MarginContainer/VBoxContainer/Left"]
+[node name="SpaceL" type="Control" parent="MarginContainer/VBoxContainer/LeftRight"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Jump" type="Label" parent="MarginContainer/VBoxContainer/LeftRight"]
 layout_mode = 2
 text = "Left"
 
-[node name="Break" type="Control" parent="MarginContainer/VBoxContainer/Left"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RemapMoveLeft" type="Button" parent="MarginContainer/VBoxContainer/Left"]
+[node name="RemapMoveLeft" type="Button" parent="MarginContainer/VBoxContainer/LeftRight"]
 layout_mode = 2
 text = "left"
 
-[node name="Right" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="SpaceM" type="Control" parent="MarginContainer/VBoxContainer/LeftRight"]
 layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="Right" type="Label" parent="MarginContainer/VBoxContainer/Right"]
+[node name="Left" type="Label" parent="MarginContainer/VBoxContainer/LeftRight"]
 layout_mode = 2
 text = "Right"
 
-[node name="Break" type="Control" parent="MarginContainer/VBoxContainer/Right"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RemapMoveRight" type="Button" parent="MarginContainer/VBoxContainer/Right"]
+[node name="RemapMoveRight" type="Button" parent="MarginContainer/VBoxContainer/LeftRight"]
 layout_mode = 2
 text = "right"
 
-[node name="Jump" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Jump" type="Label" parent="MarginContainer/VBoxContainer/Jump"]
-layout_mode = 2
-text = "Jump"
-
-[node name="Break" type="Control" parent="MarginContainer/VBoxContainer/Jump"]
+[node name="SpaceR" type="Control" parent="MarginContainer/VBoxContainer/LeftRight"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RemapJump" type="Button" parent="MarginContainer/VBoxContainer/Jump"]
-layout_mode = 2
-text = "up"
-
-[node name="Attack" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="JumpAttack" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Attack" type="Label" parent="MarginContainer/VBoxContainer/Attack"]
+[node name="SpaceL" type="Control" parent="MarginContainer/VBoxContainer/JumpAttack"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Attack" type="Label" parent="MarginContainer/VBoxContainer/JumpAttack"]
 layout_mode = 2
 text = "Attack"
 
-[node name="Break" type="Control" parent="MarginContainer/VBoxContainer/Attack"]
+[node name="RemapAttack" type="Button" parent="MarginContainer/VBoxContainer/JumpAttack"]
+layout_mode = 2
+text = "z"
+
+[node name="SpaceM" type="Control" parent="MarginContainer/VBoxContainer/JumpAttack"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RemapAttack" type="Button" parent="MarginContainer/VBoxContainer/Attack"]
+[node name="Jump" type="Label" parent="MarginContainer/VBoxContainer/JumpAttack"]
 layout_mode = 2
-text = "z"
+text = "Jump"
+
+[node name="RemapJump" type="Button" parent="MarginContainer/VBoxContainer/JumpAttack"]
+layout_mode = 2
+text = "up"
+
+[node name="SpaceR" type="Control" parent="MarginContainer/VBoxContainer/JumpAttack"]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/VolumeMusic" to="." method="_on_volume_music_value_changed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/MusicMuteCheckBox" to="." method="_on_music_mute_check_box_toggled"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/VolumeSFX" to="." method="_on_volume_sfx_value_changed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/SFXMuteMusicBox" to="." method="_on_sfx_mute_music_box_toggled"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Left/RemapMoveLeft" to="." method="_on_remap_move_left_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Right/RemapMoveRight" to="." method="_on_remap_move_right_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Jump/RemapJump" to="." method="_on_remap_jump_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Attack/RemapAttack" to="." method="_on_remap_attack_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/LeftRight/RemapMoveLeft" to="." method="_on_remap_move_left_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/LeftRight/RemapMoveRight" to="." method="_on_remap_move_right_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/JumpAttack/RemapAttack" to="." method="_on_remap_attack_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/JumpAttack/RemapJump" to="." method="_on_remap_jump_pressed"]
