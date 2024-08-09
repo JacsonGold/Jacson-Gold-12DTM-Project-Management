@@ -4,7 +4,7 @@
 
 [node name="SettingsMenu" type="Popup"]
 position = Vector2i(100, 0)
-size = Vector2i(300, 394)
+size = Vector2i(300, 300)
 visible = true
 script = ExtResource("1_r7h4v")
 
@@ -50,36 +50,14 @@ text = "Mute"
 [node name="SFXMuteMusicBox" type="CheckBox" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="ControlRemap" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="KeyRebinder" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Keybind Remap"
-horizontal_alignment = 1
 
-[node name="Jump" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="RemapJump" type="Button" parent="MarginContainer/VBoxContainer/KeyRebinder"]
 layout_mode = 2
-text = "Jump"
-
-[node name="RemapJump" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "up"
-
-[node name="RemapMoveLeft" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "left"
-
-[node name="RemapMoveRight" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "right"
-
-[node name="RemapAttack" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "z"
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/VolumeMusic" to="." method="_on_volume_music_value_changed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/MusicMuteCheckBox" to="." method="_on_music_mute_check_box_toggled"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/VolumeSFX" to="." method="_on_volume_sfx_value_changed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/SFXMuteMusicBox" to="." method="_on_sfx_mute_music_box_toggled"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/RemapJump" to="." method="_on_remap_jump_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/RemapMoveLeft" to="." method="_on_remap_move_left_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/RemapMoveRight" to="." method="_on_remap_move_right_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/RemapAttack" to="." method="_on_remap_attack_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/KeyRebinder/RemapJump" to="." method="_on_remap_jump_pressed"]

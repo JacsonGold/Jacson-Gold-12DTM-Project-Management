@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cwb1831gb5cok"]
 
-[ext_resource type="Texture2D" uid="uid://cdw64da804umo" path="res://assets/sprites/hades-scene.png" id="1_54kih"]
+[ext_resource type="Texture2D" uid="uid://cdw64da804umo" path="res://assets/sprites/Hades-Scene.png" id="1_54kih"]
 [ext_resource type="Script" path="res://scripts/hades_scene_animation.gd" id="2_c07kq"]
 
 [sub_resource type="Animation" id="Animation_1u70l"]
