@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b0p26kqqifif"]
+[gd_scene load_steps=27 format=3 uid="uid://b0p26kqqifif"]
 
 [ext_resource type="Script" path="res://scripts/level2.gd" id="1_aw2f0"]
 [ext_resource type="PackedScene" uid="uid://bu1td7cyxw2p2" path="res://scenes/player.tscn" id="1_lxdi7"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" path="res://scripts/cerberus_boss_trigger.gd" id="8_a2k62"]
 [ext_resource type="PackedScene" uid="uid://214tuf5sondk" path="res://scenes/cerberus.tscn" id="9_j81rp"]
 [ext_resource type="Texture2D" uid="uid://covqs2b480u5l" path="res://assets/sprites/Down-Here.png" id="13_g5358"]
+[ext_resource type="AudioStream" uid="uid://bf2chbn2vko5" path="res://assets/sounds/music/Underworld.mp3" id="14_7kqme"]
+[ext_resource type="AudioStream" uid="uid://dnibs1o3tbu0m" path="res://assets/sounds/sfx/ahh-i-dropped-my-lyre.mp3" id="15_dbt2s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1vjdt"]
 atlas = ExtResource("3_v4iv8")
@@ -256,6 +258,17 @@ script = ExtResource("5_52fe4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevelTP"]
 position = Vector2(1388, 303)
 shape = SubResource("RectangleShape2D_tlra7")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_7kqme")
+autoplay = true
+bus = &"Music"
+
+[node name="IDroppedMyLyre" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_dbt2s")
+pitch_scale = 0.85
+autoplay = true
+bus = &"SFX"
 
 [connection signal="body_entered" from="CerberusBossTrigger" to="." method="_on_cerberus_boss_trigger_body_entered"]
 [connection signal="body_entered" from="NextLevelTP" to="NextLevelTP" method="_on_body_entered"]

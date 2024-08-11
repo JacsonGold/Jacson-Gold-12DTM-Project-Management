@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://scripts/lyre-platform.gd" id="8_3e2ps"]
 [ext_resource type="PackedScene" uid="uid://bfh0iwqo8ddi2" path="res://scenes/gates_of_heck.tscn" id="9_5r71u"]
 [ext_resource type="Texture2D" uid="uid://covqs2b480u5l" path="res://assets/sprites/Down-Here.png" id="11_vmf20"]
-[ext_resource type="AudioStream" uid="uid://dmivexu0jq3gs" path="res://assets/sounds/music/Sunstrider.mp3" id="12_da4et"]
+[ext_resource type="AudioStream" path="res://assets/sounds/music/Sunstrider.mp3" id="12_da4et"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_68p4k"]
 texture = ExtResource("2_8xnpn")
