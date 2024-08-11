@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://byqgkayccr7h4"]
+[gd_scene load_steps=6 format=3 uid="uid://byqgkayccr7h4"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_rrqcl"]
+[ext_resource type="Theme" uid="uid://cktwlnasgcw2r" path="res://settings_menu.tres" id="2_j4bpa"]
 [ext_resource type="PackedScene" uid="uid://d3vgvytwfk3k" path="res://scenes/settings_menu.tscn" id="3_aeoui"]
-[ext_resource type="AudioStream" uid="uid://dmivexu0jq3gs" path="res://assets/sounds/music/Sunstrider.mp3" id="4_0t156"]
+[ext_resource type="AudioStream" uid="uid://bokoe58oywxqf" path="res://assets/sounds/music/Title-Music.mp3" id="4_6jey2"]
 [ext_resource type="Texture2D" uid="uid://sth7qn32c4wp" path="res://assets/sprites/TitleArtwork.png" id="4_k3p1l"]
 
 [node name="TitleScreen" type="Control"]
@@ -28,14 +29,17 @@ layout_mode = 2
 
 [node name="Play" type="Button" parent="MarginContainer/UIContainer"]
 layout_mode = 2
+theme = ExtResource("2_j4bpa")
 text = "Start Game"
 
 [node name="Options" type="Button" parent="MarginContainer/UIContainer"]
 layout_mode = 2
+theme = ExtResource("2_j4bpa")
 text = "Options"
 
 [node name="Quit" type="Button" parent="MarginContainer/UIContainer"]
 layout_mode = 2
+theme = ExtResource("2_j4bpa")
 text = "Quit"
 
 [node name="TitleArtwork" type="Sprite2D" parent="."]
@@ -48,8 +52,8 @@ texture = ExtResource("4_k3p1l")
 initial_position = 1
 visible = false
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_0t156")
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_6jey2")
 autoplay = true
 bus = &"Music"
 

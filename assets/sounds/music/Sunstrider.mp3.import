@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/Sunstrider.mp3-9ac304cb4aa9caef4d79c2c1639905
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

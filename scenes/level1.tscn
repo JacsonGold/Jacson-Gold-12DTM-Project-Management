@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://jq5wr6wapt1"]
+[gd_scene load_steps=20 format=3 uid="uid://jq5wr6wapt1"]
 
 [ext_resource type="PackedScene" uid="uid://bu1td7cyxw2p2" path="res://scenes/player.tscn" id="1_lxdi7"]
 [ext_resource type="Texture2D" uid="uid://3x04uf3l3gx5" path="res://assets/sprites/Overworld-Tilemap.png" id="2_8xnpn"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://scripts/lyre-platform.gd" id="8_3e2ps"]
 [ext_resource type="PackedScene" uid="uid://bfh0iwqo8ddi2" path="res://scenes/gates_of_heck.tscn" id="9_5r71u"]
 [ext_resource type="Texture2D" uid="uid://covqs2b480u5l" path="res://assets/sprites/Down-Here.png" id="11_vmf20"]
+[ext_resource type="AudioStream" uid="uid://dmivexu0jq3gs" path="res://assets/sounds/music/Sunstrider.mp3" id="12_da4et"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_68p4k"]
 texture = ExtResource("2_8xnpn")
@@ -253,5 +254,11 @@ position = Vector2(752, -32)
 [node name="Down-here" type="Sprite2D" parent="."]
 position = Vector2(948, -50)
 texture = ExtResource("11_vmf20")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_da4et")
+volume_db = -3.0
+autoplay = true
+bus = &"Music"
 
 [connection signal="body_entered" from="NextLevelTP" to="NextLevelTP" method="_on_body_entered"]

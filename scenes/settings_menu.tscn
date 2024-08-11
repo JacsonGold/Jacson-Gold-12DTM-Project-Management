@@ -1,25 +1,72 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3vgvytwfk3k"]
+[gd_scene load_steps=7 format=3 uid="uid://d3vgvytwfk3k"]
 
 [ext_resource type="Script" path="res://scripts/settings_menu.gd" id="1_r7h4v"]
-
-[sub_resource type="Theme" id="Theme_065fh"]
+[ext_resource type="Theme" uid="uid://cktwlnasgcw2r" path="res://settings_menu.tres" id="2_cjri7"]
+[ext_resource type="Texture2D" uid="uid://56n0jkelv7gr" path="res://assets/sprites/Slider.png" id="3_nq0hn"]
+[ext_resource type="Texture2D" uid="uid://dw24ndf0hyhxj" path="res://assets/sprites/GUI-Menu.png" id="3_v8e8d"]
+[ext_resource type="Texture2D" uid="uid://dadycepgvfgpu" path="res://assets/sprites/Slider-Grabbed.png" id="4_q2la8"]
+[ext_resource type="FontFile" uid="uid://28ufob7gso14" path="res://assets/Pixelme.ttf" id="5_v4v6m"]
 
 [node name="SettingsMenu" type="Popup"]
-position = Vector2i(100, 0)
-size = Vector2i(300, 398)
+size = Vector2i(559, 377)
 visible = true
-theme = SubResource("Theme_065fh")
+theme = ExtResource("2_cjri7")
 script = ExtResource("1_r7h4v")
 
+[node name="Back" type="NinePatchRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -279.5
+offset_right = -54.5
+offset_bottom = 380.785
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_v8e8d")
+region_rect = Rect2(0, 0, 48, 32)
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 6
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.5
+offset_top = -173.5
+offset_right = -77.5
+offset_bottom = 174.5
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+
+[node name="Settings" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_v4v6m")
+theme_override_font_sizes/font_size = 24
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/Settings"]
+layout_mode = 2
+offset_top = 19.85
+offset_right = 175.0
+offset_bottom = 22.785
+
+[node name="MusicAdjust" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_v4v6m")
+theme_override_font_sizes/font_size = 24
+text = "MUSIC"
+horizontal_alignment = 1
 
 [node name="Music" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -27,14 +74,20 @@ text = "Music"
 
 [node name="VolumeMusic" type="HSlider" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_cjri7")
+theme_override_icons/grabber = ExtResource("3_nq0hn")
+theme_override_icons/grabber_highlight = ExtResource("4_q2la8")
 min_value = -35.0
 max_value = 0.0
 
-[node name="MusicMute" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="MuteMusic" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Mute"
 
-[node name="MusicMuteCheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+[node name="MusicMute" type="Label" parent="MarginContainer/VBoxContainer/MuteMusic"]
+layout_mode = 2
+text = "Mute: "
+
+[node name="MusicMuteCheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/MuteMusic"]
 layout_mode = 2
 
 [node name="SFX" type="Label" parent="MarginContainer/VBoxContainer"]
@@ -43,19 +96,27 @@ text = "Sound Effects"
 
 [node name="VolumeSFX" type="HSlider" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_cjri7")
+theme_override_icons/grabber = ExtResource("3_nq0hn")
+theme_override_icons/grabber_highlight = ExtResource("4_q2la8")
 min_value = -35.0
 max_value = 0.0
 
-[node name="SFXMute" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="MuteSFX" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Mute"
 
-[node name="SFXMuteMusicBox" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+[node name="SFXMute" type="Label" parent="MarginContainer/VBoxContainer/MuteSFX"]
+layout_mode = 2
+text = "Mute: "
+
+[node name="SFXMuteMusicBox" type="CheckBox" parent="MarginContainer/VBoxContainer/MuteSFX"]
 layout_mode = 2
 
 [node name="ControlRemap" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Keybind Remap"
+theme_override_fonts/font = ExtResource("5_v4v6m")
+theme_override_font_sizes/font_size = 24
+text = "KEYBIND REMAP"
 horizontal_alignment = 1
 
 [node name="Left" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
@@ -71,6 +132,7 @@ size_flags_horizontal = 3
 
 [node name="RemapMoveLeft" type="Button" parent="MarginContainer/VBoxContainer/Left"]
 layout_mode = 2
+theme = ExtResource("2_cjri7")
 text = "left"
 
 [node name="Right" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
@@ -86,6 +148,7 @@ size_flags_horizontal = 3
 
 [node name="RemapMoveRight" type="Button" parent="MarginContainer/VBoxContainer/Right"]
 layout_mode = 2
+theme = ExtResource("2_cjri7")
 text = "right"
 
 [node name="Jump" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
@@ -101,6 +164,7 @@ size_flags_horizontal = 3
 
 [node name="RemapJump" type="Button" parent="MarginContainer/VBoxContainer/Jump"]
 layout_mode = 2
+theme = ExtResource("2_cjri7")
 text = "up"
 
 [node name="Attack" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
@@ -116,12 +180,13 @@ size_flags_horizontal = 3
 
 [node name="RemapAttack" type="Button" parent="MarginContainer/VBoxContainer/Attack"]
 layout_mode = 2
+theme = ExtResource("2_cjri7")
 text = "z"
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/VolumeMusic" to="." method="_on_volume_music_value_changed"]
-[connection signal="toggled" from="MarginContainer/VBoxContainer/MusicMuteCheckBox" to="." method="_on_music_mute_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/MuteMusic/MusicMuteCheckBox" to="." method="_on_music_mute_check_box_toggled"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/VolumeSFX" to="." method="_on_volume_sfx_value_changed"]
-[connection signal="toggled" from="MarginContainer/VBoxContainer/SFXMuteMusicBox" to="." method="_on_sfx_mute_music_box_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/MuteSFX/SFXMuteMusicBox" to="." method="_on_sfx_mute_music_box_toggled"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Left/RemapMoveLeft" to="." method="_on_remap_move_left_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Right/RemapMoveRight" to="." method="_on_remap_move_right_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Jump/RemapJump" to="." method="_on_remap_jump_pressed"]
