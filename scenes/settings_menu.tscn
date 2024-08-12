@@ -15,7 +15,7 @@ theme = ExtResource("2_cjri7")
 script = ExtResource("1_r7h4v")
 
 [node name="Back" type="NinePatchRect" parent="."]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -170,7 +170,7 @@ size_flags_horizontal = 3
 [node name="RemapAttack" type="Button" parent="MarginContainer/VBoxContainer/Attack"]
 layout_mode = 2
 theme = ExtResource("2_cjri7")
-text = "z"
+text = "space"
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/VolumeMusic" to="." method="_on_volume_music_value_changed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/MuteMusic/MusicMuteCheckBox" to="." method="_on_music_mute_check_box_toggled"]

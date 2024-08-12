@@ -1,6 +1,5 @@
-[gd_scene load_steps=14 format=3 uid="uid://d1n1dq1oho18a"]
+[gd_scene load_steps=13 format=3 uid="uid://d1n1dq1oho18a"]
 
-[ext_resource type="Script" path="res://scripts/level2.gd" id="1_jgi8h"]
 [ext_resource type="PackedScene" uid="uid://bu1td7cyxw2p2" path="res://scenes/player.tscn" id="2_8gvto"]
 [ext_resource type="Texture2D" uid="uid://cqrm4qr6nnqjy" path="res://assets/sprites/Underworld-Spritesheet.png" id="3_2r07k"]
 [ext_resource type="PackedScene" uid="uid://blhxdqydrt0ws" path="res://scenes/killzone.tscn" id="4_kayln"]
@@ -125,7 +124,6 @@ size = Vector2(3, 129)
 size = Vector2(58.5, 12)
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_jgi8h")
 
 [node name="Player" parent="." instance=ExtResource("2_8gvto")]
 position = Vector2(-1133, -22)
