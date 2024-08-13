@@ -18,3 +18,7 @@ func _process(delta):
 		get_tree().reload_current_scene()
 		dontlookback.visible = false
 		Global.player_death = false
+
+
+func _on_is_my_wife_there_body_entered(body):
+	pass # Replace with function body.

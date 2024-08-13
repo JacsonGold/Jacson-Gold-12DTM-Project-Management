@@ -5,7 +5,7 @@ var proceed = 0
 
 func _on_button_pressed():
 	if proceed == 2:
-		get_tree().change_scene_to_file("res://scenes/ferryman_scene.tscn")
+		get_tree().change_scene_to_file("res://scenes/level4.tscn")
 	elif proceed == 1:
 		text.text = "Orpheus hastly agreed, sprinting out of the room, dropping his lyre and not turning back."
 		proceed = proceed + 1
