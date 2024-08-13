@@ -86,5 +86,5 @@ stream = ExtResource("4_qu8bj")
 autoplay = true
 bus = &"Music"
 
-[connection signal="pressed" from="ProceedCutsceneButton" to="ProceedCutsceneButton" method="_on_proceed_button_pressed"]
 [connection signal="pressed" from="ProceedCutsceneButton" to="ProceedCutsceneButton" method="_on_pressed"]
+[connection signal="pressed" from="ProceedCutsceneButton" to="ProceedCutsceneButton" method="_on_proceed_button_pressed"]
