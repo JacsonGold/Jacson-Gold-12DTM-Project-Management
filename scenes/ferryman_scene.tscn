@@ -22,10 +22,10 @@ offset_left = 8.0
 offset_top = 9.0
 offset_right = 490.0
 offset_bottom = 233.0
-text = "Orpheus fell, eventually coliding with a boat. He looked up and found himself face to face with the ferry man, who requested for him to pay for transport deeper into the underworld.
-But Orpheus had no money, not even a coin, and so all he could do is play. 
-The ferryman stared at him
-and began rowing, to Hade's
+text = "Orpheus fell, eventually landing in a boat. He looked up and found himself face to face with the Ferryman, who requested for him to pay for transport deeper into the underworld.
+But Orpheus had no money, not even a coin. All he could do is play. 
+The Ferryman stared at him
+and began rowing to Hades'
 domain."
 
 [node name="ProceedToHades" type="Button" parent="."]

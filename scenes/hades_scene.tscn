@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cwb1831gb5cok"]
 
-[ext_resource type="Texture2D" uid="uid://cdw64da804umo" path="res://assets/sprites/Hades-Scene.png" id="1_54kih"]
+[ext_resource type="Texture2D" uid="uid://cdw64da804umo" path="res://assets/sprites/hades-scene.png" id="1_54kih"]
 [ext_resource type="Script" path="res://scripts/hades_scene.gd" id="1_y58tx"]
 
 [node name="HadesScene" type="Control"]
@@ -23,9 +23,9 @@ offset_left = 8.0
 offset_top = 9.0
 offset_right = 490.0
 offset_bottom = 233.0
-text = "Hades sat, looming over Orpheus, as he pleaded for the soul of his wife back.
-Orpheus began running out of hope, and out of desperation started doing the one thing he now how to.
-His music played out all over the underworld, and it seemed that time froze.
+text = "Hades sat, looming over Orpheus who pleaded for the soul of his wife back.
+Orpheus began running out of hope and out of desperation, started doing the one thing he knew how to.
+The strum of his lyre echoed all over the underworld, and it seemed that time froze.
 "
 
 [node name="Button" type="Button" parent="."]

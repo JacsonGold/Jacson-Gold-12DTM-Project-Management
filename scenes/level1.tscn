@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://jq5wr6wapt1"]
+[gd_scene load_steps=21 format=3 uid="uid://jq5wr6wapt1"]
 
+[ext_resource type="Script" path="res://scripts/level1.gd" id="1_jwudn"]
 [ext_resource type="PackedScene" uid="uid://bu1td7cyxw2p2" path="res://scenes/player.tscn" id="1_lxdi7"]
 [ext_resource type="Texture2D" uid="uid://3x04uf3l3gx5" path="res://assets/sprites/Overworld-Tilemap.png" id="2_8xnpn"]
 [ext_resource type="PackedScene" uid="uid://d24uewn15s6kc" path="res://scenes/lyre.tscn" id="3_4ny73"]
@@ -195,6 +196,7 @@ _data = {
 }
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_jwudn")
 
 [node name="Player" parent="." instance=ExtResource("1_lxdi7")]
 position = Vector2(-474, -64)
@@ -260,5 +262,11 @@ stream = ExtResource("12_8b7t8")
 volume_db = -3.0
 autoplay = true
 bus = &"Music"
+
+[node name="Controls" type="RichTextLabel" parent="."]
+offset_left = -463.0
+offset_top = -114.0
+offset_right = -423.0
+offset_bottom = -74.0
 
 [connection signal="body_entered" from="NextLevelTP" to="NextLevelTP" method="_on_body_entered"]

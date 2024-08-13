@@ -221,7 +221,7 @@ offset_left = 8.0
 offset_top = 96.0
 offset_right = 490.0
 offset_bottom = 370.0
-text = "Unfortunately Orpheus couldn't resist himself, before exting the underworld, he looked back. and before his eyes..."
+text = "Unfortunately, Orpheus couldn't resist himself. Right at the gates of the underworld, he looked back. Before his eyes..."
 
 [node name="NewlywedRun" type="AnimatedSprite2D" parent="."]
 visible = false
