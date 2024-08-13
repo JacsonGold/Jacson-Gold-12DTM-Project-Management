@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -250.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var lyre_sound = $LyreSound
 
 func _physics_process(delta):
 	if not Global.player_death:
@@ -25,6 +26,7 @@ func handle_inputs(delta):
 	elif Input.is_action_just_pressed("attack"):
 		if Global.lyre_pickup == true:
 			$PlayerAttack.attack()
+			lyre_sound.play()
 	# Get the input direction -1, 0, 1
 	var direction = Input.get_axis("move_left", "move_right")
 	

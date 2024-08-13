@@ -21,4 +21,5 @@ func _process(delta):
 
 
 func _on_is_my_wife_there_body_entered(body):
+	get_tree().change_scene_to_file("res://scenes/wife_taken.tscn")
 	pass # Replace with function body.

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cy3giyxd5v300"]
+[gd_scene load_steps=8 format=3 uid="uid://cy3giyxd5v300"]
 
 [ext_resource type="Texture2D" uid="uid://bc4mi7htdu832" path="res://assets/sprites/intro-animation/CloudySky.png" id="1_s8slh"]
 [ext_resource type="Texture2D" uid="uid://cxuyb5a5lfmpc" path="res://assets/sprites/intro-animation/GrassyCliff.png" id="2_m30qf"]
 [ext_resource type="Script" path="res://scripts/proceed_cutscene_button.gd" id="3_sk5k0"]
+[ext_resource type="AudioStream" uid="uid://bokoe58oywxqf" path="res://assets/sounds/music/Title-Music.mp3" id="4_qu8bj"]
 
 [sub_resource type="Animation" id="Animation_pbal8"]
 resource_name = "Intro Animation"
@@ -79,6 +80,11 @@ offset_right = 492.0
 offset_bottom = 490.0
 text = "Proceed."
 script = ExtResource("3_sk5k0")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qu8bj")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="ProceedCutsceneButton" to="ProceedCutsceneButton" method="_on_proceed_button_pressed"]
 [connection signal="pressed" from="ProceedCutsceneButton" to="ProceedCutsceneButton" method="_on_pressed"]

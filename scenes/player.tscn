@@ -1,8 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://bu1td7cyxw2p2"]
+[gd_scene load_steps=30 format=3 uid="uid://bu1td7cyxw2p2"]
 
 [ext_resource type="Texture2D" uid="uid://c0ide8cx121cs" path="res://assets/sprites/DTC-Player.png" id="1_bnror"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_t2g43"]
 [ext_resource type="PackedScene" uid="uid://c26mfmpa4nhkw" path="res://scenes/player_attack.tscn" id="3_mi1qf"]
+[ext_resource type="AudioStream" uid="uid://dpq7suo0jd6rq" path="res://assets/sounds/sfx/Strum.mp3" id="4_dkfrt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2mxtq"]
 atlas = ExtResource("1_bnror")
@@ -224,3 +225,7 @@ shape = SubResource("CapsuleShape2D_b75pn")
 
 [node name="PlayerAttack" parent="." instance=ExtResource("3_mi1qf")]
 position = Vector2(18, -11)
+
+[node name="LyreSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dkfrt")
+bus = &"SFX"

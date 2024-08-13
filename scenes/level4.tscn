@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cvn1dxf2qojb7"]
+[gd_scene load_steps=18 format=3 uid="uid://cvn1dxf2qojb7"]
 
 [ext_resource type="Script" path="res://scripts/level4.gd" id="1_t82x0"]
 [ext_resource type="PackedScene" uid="uid://bu1td7cyxw2p2" path="res://scenes/player.tscn" id="1_wbhr5"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://chearrsdaou4a" path="res://assets/sprites/Wife-Hider.png" id="4_scdag"]
 [ext_resource type="Texture2D" uid="uid://bb47mhi4lccm8" path="res://assets/sprites/Rising-Platform.png" id="7_vl77h"]
 [ext_resource type="Texture2D" uid="uid://cydykv3morade" path="res://assets/sprites/GodRays.png" id="8_4jtrw"]
+[ext_resource type="AudioStream" uid="uid://bf2chbn2vko5" path="res://assets/sounds/music/Underworld.mp3" id="9_mhcjr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_68p4k"]
 texture = ExtResource("2_opveh")
@@ -347,5 +348,10 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IsMyWifeThere"]
 position = Vector2(0, -21)
 shape = SubResource("RectangleShape2D_8ir7p")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_mhcjr")
+autoplay = true
+bus = &"Music"
 
 [connection signal="body_entered" from="IsMyWifeThere" to="." method="_on_is_my_wife_there_body_entered"]
