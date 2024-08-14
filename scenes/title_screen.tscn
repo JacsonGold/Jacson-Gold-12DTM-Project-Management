@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d3vgvytwfk3k" path="res://scenes/settings_menu.tscn" id="3_aeoui"]
 [ext_resource type="AudioStream" uid="uid://bokoe58oywxqf" path="res://assets/sounds/music/Title-Music.mp3" id="4_6jey2"]
 [ext_resource type="Texture2D" uid="uid://sth7qn32c4wp" path="res://assets/sprites/TitleArtwork.png" id="4_k3p1l"]
-[ext_resource type="Texture2D" uid="uid://bjmbkswcas1ga" path="res://assets/sprites/Title.png" id="6_4vp6q"]
+[ext_resource type="Texture2D" uid="uid://bjmbkswcas1ga" path="res://assets/sprites/TItle.png" id="6_4vp6q"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
