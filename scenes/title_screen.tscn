@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://byqgkayccr7h4"]
+[gd_scene load_steps=7 format=3 uid="uid://byqgkayccr7h4"]
 
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_rrqcl"]
 [ext_resource type="Theme" uid="uid://cktwlnasgcw2r" path="res://settings_menu.tres" id="2_j4bpa"]
 [ext_resource type="PackedScene" uid="uid://d3vgvytwfk3k" path="res://scenes/settings_menu.tscn" id="3_aeoui"]
 [ext_resource type="AudioStream" uid="uid://bokoe58oywxqf" path="res://assets/sounds/music/Title-Music.mp3" id="4_6jey2"]
 [ext_resource type="Texture2D" uid="uid://sth7qn32c4wp" path="res://assets/sprites/TitleArtwork.png" id="4_k3p1l"]
+[ext_resource type="Texture2D" uid="uid://bjmbkswcas1ga" path="res://assets/sprites/Title.png" id="6_4vp6q"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -18,9 +19,9 @@ script = ExtResource("1_rrqcl")
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_left = 200.0
-offset_top = 200.0
+offset_top = 250.0
 offset_right = 300.0
-offset_bottom = 301.0
+offset_bottom = 351.0
 scale = Vector2(1.89, 1.89)
 pivot_offset = Vector2(50, 50)
 
@@ -56,6 +57,11 @@ visible = false
 stream = ExtResource("4_6jey2")
 autoplay = true
 bus = &"Music"
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(253, 119)
+scale = Vector2(9, 9)
+texture = ExtResource("6_4vp6q")
 
 [connection signal="pressed" from="MarginContainer/UIContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/UIContainer/Options" to="." method="_on_options_pressed"]

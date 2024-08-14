@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cy3giyxd5v300"]
 
-[ext_resource type="Texture2D" uid="uid://bc4mi7htdu832" path="res://assets/sprites/intro-animation/CloudySky.png" id="1_s8slh"]
-[ext_resource type="Texture2D" uid="uid://cxuyb5a5lfmpc" path="res://assets/sprites/intro-animation/GrassyCliff.png" id="2_m30qf"]
+[ext_resource type="Texture2D" uid="uid://bhfugfywab0ck" path="res://assets/sprites/intro-animation/SkyBetter.png" id="1_aqjqt"]
+[ext_resource type="Texture2D" uid="uid://d3afp63cfbb44" path="res://assets/sprites/intro-animation/BetterGrassyCliff.png" id="2_ykavx"]
 [ext_resource type="Script" path="res://scripts/proceed_cutscene_button.gd" id="3_sk5k0"]
 [ext_resource type="AudioStream" uid="uid://bokoe58oywxqf" path="res://assets/sounds/music/Title-Music.mp3" id="4_qu8bj"]
 
@@ -45,13 +45,14 @@ _data = {
 [node name="IntroCutscene" type="Node2D"]
 
 [node name="CloudySky" type="Sprite2D" parent="."]
-position = Vector2(56.4445, 254.5)
-scale = Vector2(0.779321, 0.779321)
-texture = ExtResource("1_s8slh")
+position = Vector2(250, 250)
+scale = Vector2(1.95313, 1.95313)
+texture = ExtResource("1_aqjqt")
 
 [node name="GrassyCliff" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
-texture = ExtResource("2_m30qf")
+scale = Vector2(1.95312, 1.95312)
+texture = ExtResource("2_ykavx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../GrassyCliff")

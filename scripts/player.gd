@@ -8,6 +8,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var lyre_sound = $LyreSound
+@export var Coyote_Time: float = 0.2
+@onready var coyote_timer = $CoyoteTimer
+
+var Jump_Available: bool = true
 
 func _physics_process(delta):
 	if not Global.player_death:
@@ -18,11 +22,18 @@ func _physics_process(delta):
 func handle_inputs(delta):
 	# Add the gravity.
 	if not is_on_floor():
+		if coyote_timer.is_stopped():
+			coyote_timer.start(Coyote_Time)
+		#get_tree().create_timer(Coyote_Time).timeout.connect(Coyote_Timeout)
 		velocity.y += gravity * delta
+	else:
+		Jump_Available = true
+		coyote_timer.stop()
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and Jump_Available:
 		velocity.y = JUMP_VELOCITY
+		Jump_Available = false
 	elif Input.is_action_just_pressed("attack"):
 		if Global.lyre_pickup == true:
 			$PlayerAttack.attack()
@@ -68,3 +79,5 @@ func handle_inputs(delta):
 
 	move_and_slide()
 
+func Coyote_Timeout():
+	Jump_Available = false

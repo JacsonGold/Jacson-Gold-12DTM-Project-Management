@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdw64da804umo"
-path="res://.godot/imported/Hades-Scene.png-ab972d8d7ea89585f3dcd5c0fd2f62b4.ctex"
+uid="uid://d3afp63cfbb44"
+path="res://.godot/imported/BetterGrassyCliff.png-368119741ec06bd5df8f6175785a0a5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Hades-Scene.png"
-dest_files=["res://.godot/imported/Hades-Scene.png-ab972d8d7ea89585f3dcd5c0fd2f62b4.ctex"]
+source_file="res://assets/sprites/intro-animation/BetterGrassyCliff.png"
+dest_files=["res://.godot/imported/BetterGrassyCliff.png-368119741ec06bd5df8f6175785a0a5a.ctex"]
 
 [params]
 
